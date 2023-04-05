@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.1);
+  --blue-1: #62b8f5;
+  --blue-2: #4475ef;
+  --shadow: rgba(3, 46, 87, 0.2);
+}
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, var(--blue-1), var(--blue-2));
+}
+.wrapper {
+  font-size: 16px;
+ 
+  position: absolute;
+  transform: rotatey(45deg);
+ 
+}
+.container {
+  width: 100%;
+  background: var(--transp-white-2);
+  backdrop-filter: blur(10px);
+  padding: 3em 1.8em;
+  border: 2px solid var(--transp-white-2);
+  border-radius: 0.6em;
+  box-shadow: 0 1.8em 3.7em var(--shadow);
+  text-align: center;
+}
+.shape {
+  position: absolute;
+  background-color: var(--transp-white-1);
+  backdrop-filter: blur(1.2em);
+  border: 2px solid var(--transp-white-2);
+  border-radius: 50%;
+}
+.shape-1 {
+  height: 13em;
+  width: 13em;
+  right: -6.5em;
+  top: 1.8em;
+}
+.shape-2 {
+  height: 11em;
+  width: 11em;
+  bottom: -3.7em;
+  left: -2.5em;
+}
+.search-container {
+  font-size: 1em;
+  width:50%;
+   margin: auto;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.25em;
+}
+.search-container input,
+.search-container button {
+  outline: none;
+  font-size: 1.5em;
+  border: none;
+}
+.search-container input {
+  padding: 0.7em;
+  background-color: transparent;
+  border-bottom: 2px solid var(--transp-white-1);
+  color: var(--white);
+  font-weight: 300;
+}
+.search-container input::placeholder {
+  color: black;
+}
+.search-container input:focus {
+  border-color: var(--white);
+}
+.search-container button {
+  color: var(--blue-2);
+  background-color: var(--white);
+  border-radius: 0.3em;
+}
+#result h2 {
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  margin: 1.25em 0;
+}
+.weather,
+.desc {
+	color: var(--off-white);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 2em;
+}
+.weather {
+  margin-top: -0.7em;
+}
+
+
+
+
+
+
+.content {
+  position: relative;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 8em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+#result img {
+  margin: 0.6em 0 0 0;
+  width: 6.2em;
+  filter: drop-shadow(0 1.8em 3.7em var(--shadow));
+}
+#result h1 {
+  font-size: 4em;
+  margin: 0.3em 0 0.7em 0;
+  line-height: 0;
+  font-weight: 400;
+  color: var(--white);
+}
+.temp-container {
+ width:max-content;
+  display:  -webkit-inline-box;;
+  justify-content: center;
+}
+.temp-container div {
+  padding: 0.3em 1em;
+}
+.temp-container div:first-child {
+  border-right: 1px solid var(--transp-white-1);
+}
+.temp-container .title {
+  font-weight: 600;
+  color: var(--white);
+}
+.temp-container .temp {
+  font-weight: 300;
+  color: var(--off-white);
+}
+.msg {
+  margin-top: 1.8em;
+  color: var(--white);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 450px) {
+  .wrapper {
+    font-size: 14px;
+  }
+}
+
+ 
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+.rainbow {
+ 
+  position: relative;
+  margin: 50px;               
+  width: 500px;
+  height: 250px;
+  background: linear-gradient(0deg, rgb(9 94 137), #aed6e9)
+}
+
+.rainbow:before, .rainbow:after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+rainbow:after {
+  filter: blur(50px);
+}
